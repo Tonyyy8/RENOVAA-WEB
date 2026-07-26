@@ -72,7 +72,7 @@ function updatePricing() {
   document.querySelectorAll('.price-row strong[data-monthly]').forEach(el => {
     el.textContent = el.dataset[billingMode];
   });
-  document.querySelectorAll('.old-price').forEach(el => {
+  document.querySelectorAll('.old-price,.old-year').forEach(el => {
     el.textContent = el.dataset[billingMode];
   });
   document.querySelectorAll('.billing-note[data-monthly]').forEach(el => {
