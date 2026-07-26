@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get started with RENOVAA." />
+  <title>RENOVAA — Get Started</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>.get-started-wrap{padding:70px 4vw 96px}</style>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="RENOVAA home">
+      <img src="assets/renovaa-logo-cropped.png" alt="RENOVAA" />
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html#problem">How it works</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="live-demos.html">Try it Live</a>
+      <a href="about-renovaa.html">About Us</a>
+      <a href="partnerships.html">Partnerships</a>
+    </nav>
+    <a class="btn btn-primary header-cta" href="get-started.html">Get started <span>→</span></a>
+  </header>
+
+  <main>
+    <section class="final-cta get-started-wrap" style="width:min(614px,calc(41% - 4vw));margin:30px auto 0;border-radius:34px">
+      <div class="cta-copy reveal visible">
+        <span class="eyebrow">The next era of beauty commerce</span>
+        <h2>The world of online beauty is reinventing itself.</h2>
+        <h3>Are you?</h3>
+      </div>
+      <form class="demo-form reveal visible" id="demo-form" autocomplete="off">
+        <div class="form-grid">
+          <label><span>First name</span><input name="demoFirstName" type="text" required /></label>
+          <label><span>Last name</span><input name="demoLastName" type="text" required /></label>
+        </div>
+        <label><span>Company name</span><input name="company" type="text" placeholder="Your skincare brand" required /></label>
+        <label><span>Company email</span><input name="email" type="email" placeholder="name@company.com" required /></label>
+        <label><span>Website URL</span><input name="website" type="url" placeholder="https://yourbrand.com" /></label>
+        <input type="hidden" name="plan" id="plan-field" value="" />
+        <button class="btn btn-light" type="submit">Get started <span>→</span></button>
+        <p class="form-status" id="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <img src="assets/renovaa-logo-cropped.png" alt="RENOVAA" />
+      <p>From skin analysis to cart — inside your brand experience.</p>
+      <div><a href="index.html#problem">How it works</a><a href="index.html#pricing">Pricing</a><a href="live-demos.html">Try it Live</a><a href="partnerships.html">Partnerships</a><a href="about-renovaa.html">About Us</a><a href="get-started.html">Get started</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 RENOVAA. All rights reserved.</span><span>Privacy · Terms · Data processing</span></div>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const plan = params.get('plan');
+    if (plan) {
+      document.getElementById('plan-field').value = plan;
+      const label = plan.charAt(0).toUpperCase() + plan.slice(1);
+      const h3 = document.querySelector('.cta-copy h3');
+      if (h3) h3.textContent = 'Get started with ' + label + '.';
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

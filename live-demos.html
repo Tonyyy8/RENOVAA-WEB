@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Try RENOVAA live on three demo brand styles." />
+  <title>RENOVAA — Live Demos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .demos-hero{padding-bottom:8px}
+    .demos-caption{display:inline-block;margin-top:10px;font-size:12.5px;color:var(--muted);font-style:italic}
+    .demos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+    .demo-card{display:flex;flex-direction:column;border-radius:24px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);text-decoration:none;color:inherit;transition:.25s ease}
+    .demo-card:hover{transform:translateY(-6px);box-shadow:0 28px 64px rgba(75,24,50,.2)}
+    .demo-thumb{position:relative;height:190px;display:flex;flex-direction:column;overflow:hidden}
+    .demo-card-body{padding:24px 26px 28px}
+    .demo-card-body h3{margin:0 0 6px;font-family:Manrope,sans-serif;font-size:1.25rem}
+    .demo-descriptor{margin:0 0 16px;color:var(--muted);font-size:14px;line-height:1.5}
+    .demo-try{display:inline-flex;align-items:center;gap:6px;font-weight:800;color:var(--plum);font-size:14px}
+    @media(max-width:980px){.demos-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="RENOVAA home">
+      <img src="assets/renovaa-logo-cropped.png" alt="RENOVAA" />
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html#problem">How it works</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="live-demos.html">Try it Live</a>
+      <a href="about-renovaa.html">About Us</a>
+      <a href="partnerships.html">Partnerships</a>
+    </nav>
+    <a class="btn btn-primary header-cta" href="index.html#contact">Get started <span>→</span></a>
+  </header>
+
+  <main>
+    <section class="section-wrap demos-hero">
+      <span class="eyebrow">Live demos brands</span>
+      <h1>See RENOVAA Starter plan on three different Demo brand.</h1>
+      <p style="max-width:640px;color:var(--muted);font-size:17px;line-height:1.6">Click any brand below to try the actual widget, live. Same skin scan, different routine — built entirely from that brand's own catalog.</p>
+      <span style="display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:8px 14px;border-radius:999px;background:#f6eef3;color:var(--plum);font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em">Try the Starter plan</span><br />
+      <span class="demos-caption">These are demo brands we built to showcase RENOVAA — not real clients.</span>
+
+      <div class="demos-grid">
+
+        <a class="demo-card" href="https://tonyyy8.github.io/PURE-THINGS-/index.html" target="_blank" rel="noopener">
+          <div class="demo-thumb" style="background:#fff">
+      <div style="display:flex;gap:6px;height:14px;padding:14px 14px 0">
+        <span style="flex:1;background:#e94f5c;border-radius:3px"></span>
+        <span style="flex:1;background:#f4b93e;border-radius:3px"></span>
+        <span style="flex:1;background:#5aa9d6;border-radius:3px"></span>
+        <span style="flex:1;background:#f19ac2;border-radius:3px"></span>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;flex:1">
+        <img src="assets/brand-pure-things-logo.jpg" alt="Pure Things" style="max-width:220px;width:70%;object-fit:contain" />
+      </div>
+    </div>
+          <div class="demo-card-body">
+            <h3>Pure Things</h3>
+            <p class="demo-descriptor">Playful, color-blocked clean beauty</p>
+            <span class="demo-try">Try it Live <span>→</span></span>
+          </div>
+        </a>
+
+        <a class="demo-card" href="https://tonyyy8.github.io/Kora-Skin/" target="_blank" rel="noopener">
+          <div class="demo-thumb" style="background:#f7f3ec">
+      <div style="position:absolute;top:0;right:0;width:60%;height:60%;background:#d9b7a3;opacity:.35;border-radius:0 0 0 100%"></div>
+      <div style="position:absolute;bottom:0;left:0;width:50%;height:45%;background:#a9b79a;opacity:.3;border-radius:0 100% 0 0"></div>
+      <div style="position:relative;display:flex;align-items:center;justify-content:center;height:100%">
+        <img src="assets/brand-kora-skin-logo.png" alt="Kora Skin" style="max-width:110px;width:55%;object-fit:contain" />
+      </div>
+    </div>
+          <div class="demo-card-body">
+            <h3>Kora Skin</h3>
+            <p class="demo-descriptor">Clean botanical, elevated skincare</p>
+            <span class="demo-try">Try it Live <span>→</span></span>
+          </div>
+        </a>
+
+        <a class="demo-card" href="https://tonyyy8.github.io/AZURIA/#/" target="_blank" rel="noopener">
+          <div class="demo-thumb" style="background:#fff">
+      <div style="position:absolute;top:22px;left:22px;right:22px;height:1px;background:#8fa6c9"></div>
+      <div style="position:absolute;bottom:22px;left:22px;right:22px;height:1px;background:#8fa6c9"></div>
+      <div style="display:flex;align-items:center;justify-content:center;height:100%">
+        <img src="assets/brand-azuria-logo.png" alt="Azuria" style="max-width:190px;width:65%;object-fit:contain" />
+      </div>
+    </div>
+          <div class="demo-card-body">
+            <h3>Azuria</h3>
+            <p class="demo-descriptor">Minimal, clinical dermatological</p>
+            <span class="demo-try">Try it Live <span>→</span></span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <img src="assets/renovaa-logo-cropped.png" alt="RENOVAA" />
+      <p>From skin analysis to cart — inside your brand experience.</p>
+      <div><a href="index.html#problem">How it works</a><a href="index.html#pricing">Pricing</a><a href="live-demos.html">Try it Live</a><a href="partnerships.html">Partnerships</a><a href="about-renovaa.html">About Us</a><a href="index.html#contact">Get started</a></div>html#contact">Get started</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 RENOVAA. All rights reserved.</span><span>Privacy · Terms · Data processing</span></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

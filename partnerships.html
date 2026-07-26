@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RENOVAA partnerships with leading skincare science and formulation labs." />
+  <title>RENOVAA — Partnerships</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .partners-hero{padding-bottom:20px}
+    .partners-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:10px;align-items:start}
+    .partner-card{padding:36px;border-radius:24px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column;gap:18px;transition:.25s ease;text-decoration:none}
+    .partner-card:hover{transform:translateY(-4px);box-shadow:0 26px 60px rgba(75,24,50,.18)}
+    .partner-logo{height:96px;display:flex;align-items:center;justify-content:flex-start}
+    .partner-logo img{max-height:100%;width:auto;max-width:230px;object-fit:contain;display:block}
+    .partner-card h3{margin:0;font-family:Manrope,sans-serif;font-size:1.15rem;text-transform:uppercase;letter-spacing:.06em}
+    .partner-card p{margin:0;color:var(--muted);line-height:1.6}
+    .partner-cta{margin-top:96px;padding-top:48px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start}
+    .partner-cta h3{grid-column:2;margin:0;font-family:Manrope,sans-serif;font-size:1.5rem}
+    .partner-cta p{grid-column:2;margin:0;color:var(--muted);line-height:1.5;font-size:18px;max-width:640px}
+    .partner-cta p+p{margin-top:4px}
+    .partner-cta a{color:var(--plum);font-weight:800}
+    @media(max-width:900px){.partners-grid{grid-template-columns:1fr}.partner-cta{grid-template-columns:1fr}.partner-cta h3,.partner-cta p{grid-column:1}}
+  </style>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="RENOVAA home">
+      <img src="assets/renovaa-logo-cropped.png" alt="RENOVAA" />
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html#problem">How it works</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="live-demos.html">Try it Live</a>
+      <a href="about-renovaa.html">About Us</a>
+      <a href="partnerships.html">Partnerships</a>
+    </nav>
+    <a class="btn btn-primary header-cta" href="index.html#contact">Get started <span>→</span></a>
+  </header>
+
+  <main>
+    <section class="section-wrap partners-hero">
+      <span class="eyebrow">Partnerships</span>
+      <h1>Backed by skincare science we trust.</h1>
+      <p style="max-width:640px;color:var(--muted);font-size:17px;line-height:1.6">RENOVAA's skin analysis is built alongside formulation and dermatology partners, so every recommendation reflects real product science.</p>
+
+      <div class="partners-grid">
+        <a class="partner-card" href="https://www.laboratoricosmeticimilano.com/en" target="_blank" rel="noopener" style="color:inherit">
+          <div class="partner-logo"><img src="assets/partner-lcm.png" alt="Laboratori Cosmetici Milano (LCM)" /></div>
+          <h3>LABORATORI COSMETICI MILANO</h3>
+          <p>An Italian cosmetics laboratory specializing in the formulation and manufacturing of skincare products, providing the ingredient and formulation expertise behind our product-matching recommendations.</p>
+        </a>
+        <a class="partner-card" href="https://derma-mi.com/" target="_blank" rel="noopener" style="color:inherit">
+          <div class="partner-logo"><img src="assets/partner-dermami.png" alt="Derma.MI" /></div>
+          <h3>DERMA <span style="color:#4ea3c7">|</span> MI</h3>
+          <p>A dermatology-focused partner supporting the clinical grounding of RENOVAA's skin analysis, helping keep our guidance aligned with dermatological best practice.</p>
+        </a>
+      </div>
+
+      <div class="partner-cta">
+        <h3>Become a Partner</h3>
+        <p>Interested in partnering with RENOVAA?</p>
+        <p>Tell us a little about your company and how you'd like to work together at <a href="mailto:hello@renovaa.net">hello@renovaa.net</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <img src="assets/renovaa-logo-cropped.png" alt="RENOVAA" />
+      <p>From skin analysis to cart — inside your brand experience.</p>
+      <div><a href="index.html#problem">How it works</a><a href="index.html#pricing">Pricing</a><a href="live-demos.html">Try it Live</a><a href="partnerships.html">Partnerships</a><a href="about-renovaa.html">About Us</a><a href="index.html#contact">Get started</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 RENOVAA. All rights reserved.</span><span>Privacy · Terms · Data processing</span></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
