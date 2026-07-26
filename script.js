@@ -26,10 +26,16 @@ document.querySelectorAll('a[href]').forEach(link => {
 
 const heroVideo = document.getElementById('hero-video');
 if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.defaultMuted = true;
+  heroVideo.setAttribute('muted', '');
+  heroVideo.playsInline = true;
+  heroVideo.setAttribute('playsinline', '');
+  heroVideo.setAttribute('webkit-playsinline', '');
   heroVideo.loop = false;
   let reversing = false;
   const playForward = () => {
-    reversing = false;
+    if (reversing) return;
     heroVideo.playbackRate = 1;
     const p = heroVideo.play();
     if (p && p.catch) p.catch(() => {});
@@ -52,8 +58,17 @@ if (heroVideo) {
     reversing = true;
     requestAnimationFrame(stepReverse);
   };
+  playForward();
   heroVideo.addEventListener('canplay', playForward);
+  heroVideo.addEventListener('loadeddata', playForward);
   heroVideo.addEventListener('ended', playReverse);
+  let retries = 0;
+  const retryTimer = setInterval(() => {
+    retries += 1;
+    if (!reversing && heroVideo.paused && heroVideo.readyState >= 2) playForward();
+    if ((!heroVideo.paused || retries > 20) ) clearInterval(retryTimer);
+  }, 300);
+  document.addEventListener('touchstart', () => { if (heroVideo.paused && !reversing) playForward(); }, { once: true, passive: true });
 }
 
 const observer = new IntersectionObserver(entries => {
